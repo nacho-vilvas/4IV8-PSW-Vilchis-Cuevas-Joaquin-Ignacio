@@ -1,0 +1,34 @@
+@keyframes animacion_test{
+    from{
+        background-color: red;
+    }
+    to{
+        background-color: yellow;
+    }
+}
+
+@keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes label-animation{
+    from{
+        transform: rotate(0deg);
+        margin-left: 0;
+    }
+    to{
+        transform: rotate(180deg);
+        margin-left: 85vw;
+    }
+}
+
+.label-container{
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid rgb(55, 55, 55);
+}
