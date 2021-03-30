@@ -11,10 +11,9 @@
 <body>
 
     <p>
-        Se le ha ordenado diseñar una aplicación web
-        la cual pueda calcular el interes del pago mensual
-        de una inversion al 2%, para lo cual debera
-        diseñar un formulario haga dicho cálculo.
+        1) Suponga que un individuo desea invertir su capital en un 
+        banco y desea saber cuanto dinero ganara despues de un mes
+        si el banco paga a razon de 2% mensual.
     </p>
 
     <form method="post" name="formulario" >
@@ -24,6 +23,14 @@
                 <td class="td_inf" ><input type="text" name="cantidad"
                     onkeypress="return validarn(event)" ></td>
             </tr>
+
+            <tr>
+                <td class="td_sup">Introduce la cantidad de meses: </td>
+
+                <td class="td_inf"><input type="text" name="meses" 
+                    onkeypress="return validarn(event)" ></td>
+            </tr>
+
             <tr>
                 <td></td>
                 <td class="td_inf" > <input type="button" value="interes"

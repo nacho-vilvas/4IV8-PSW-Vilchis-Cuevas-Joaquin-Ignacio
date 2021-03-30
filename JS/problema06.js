@@ -11,17 +11,16 @@ function validarn(e){
 
 function interes(){
     var valor = document.formulario.cantidad.value;
-    var valor2 = document.formulario.meses.value;
+    var valorb = document.formulario.cantidadb.value;
     var result = parseInt(valor);
-    var mes = parseInt(valor2);
-    var interes = (mes*result)*0.02;
-    var total = result+interes;
+    var resultb = parseInt(valorb);
+    var edad = result - resultb;
 
-    document.formulario.sueldoti.value = "$"+total;
+    document.formulario.sueldoti.value = edad + " años.";
 }
 
 function borrar(){
-    document.formulario.sueldoti.value = "";
-    document.formulario.meses.value = "";
     document.formulario.cantidad.value = "";
+    document.formulario.cantidadb.value = "";
+    document.formulario.sueldoti.value = "";
 }

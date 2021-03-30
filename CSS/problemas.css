@@ -2,12 +2,14 @@
     align-items: left;
     width: 100;
     justify-content: left;
+    background-color: rgb(233, 233, 233);
 }
 
 .td_inf{
     align-items: center;
     justify-content: center;
     width: 150;
+    background-color: rgb(236, 236, 236);
 }
 
 .input_text{
@@ -25,9 +27,21 @@
     background-color: #86deff;
 }
 
+td{
+    background-color: rgb(236, 236, 236);
+}
+
+input{
+    background-color: rgb(217, 255, 244);
+}
+
 p{
     font-size: 16px;
     align-items: center;
     justify-content: center;
     color: #000000;
+}
+
+table{
+    background-color: rgb(233, 233, 233);
 }
