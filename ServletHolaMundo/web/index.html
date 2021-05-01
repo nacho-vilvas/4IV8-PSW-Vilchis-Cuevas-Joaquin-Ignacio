@@ -6,37 +6,107 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Registro de Usuarios</title>
+        <title>CRUD usuarios</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/style.css">
+        <script src="./JS/validacion.js"></script>
     </head>
     <body>
-        <div class="container" >
-            
-            <div class="containerRegistro">
-                
-                <form name="formulario" method="post" 
-                  action="Registro">
-                <label>Nombre:</label>
-                <input type="text" name="nombre" >
-                <br>
-                <label>Apellido Paterno:</label>
-                <input type="text" name="appat" >
-                <br>
-                <label>Apellido Materno:</label>
-                <input type="text" name="appmat" >
-                <br>
-                <label>Edad:</label>
-                <input type="number" name="edad" min="01" max="99" size="2" >
-                <br>
-                <label>Correo:</label>
-                <input type="email" name="correo" >
-                <br>
-                <input type="submit" value="Registro de Usuarios" >
-                <input type="reset" value="Borrar Registro" >
+        <div class="contenedora">
+            <h1>CRUD de Usuarios Usando Bases de Datos</h1>
+            </div>
+            <form name="formulario" method="get" action="Registro" onsubmit="return validarRegistro(this)">
+
+                    <hr>
+                    <div class="input-box">
+                      <span class="details">Nombre(s)</span>
+                      <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
+                    </div>
+                    
+                    <br>
+                    
+                    <div class="input-box">
+                      <span class="details">Apellido Paterno</span>
+                      <input type="text" name="appat" placeholder="Ingrese su apellido paterno" required>
+                    </div>
+                    
+                    <br>
+                    
+                    <div class="input-box">
+                      <span class="details">Apellido Materno</span>
+                      <input type="text" name="apmat" placeholder="Ingrese su apellido materno" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                      <span class="details">Correo</span>
+                      <input type="email" name="correo" placeholder="Ingrese su correo" required>
+                    </div>
+                    
+                    <br>
+                    
+                    <div class="input-box">
+                      <span class="details">Edad</span>
+                      <input type="number" name="edad" placeholder="Ingrese su edad" required onkeypress="return validarn(event)">
+                    </div>
+                    
+                <div class="button">
+                    <input type="submit" value="Registrar">
+                </div>
+                <div class="button">
+                    <input type="reset" value="Eliminar Datos">
+                </div>
+                    
+                    <hr>
+                    
             </form>
             </div>
             
-        </div>
+            <div class="containerConsulta">
+          
+                <form method="get" name="consultarregistro" action="Consultar">
+                    <div class="button">
+                    <input type="submit" value="Consultar Datos">
+                    </div>
+                    
+                    <hr>
+                    
+                </form>
+            </div>
+            
+            <div class="containerEliminar">
+                <div class="title">Ingrese el ID del usuario que desea eliminar</div>
+                <form method="post" name="formularioeliminar" action="Eliminar" onsubmit="return validarIDE(this)"><br>
+                    <div>
+                    <div class="input-box">
+                      <span class="details">ID)</span>
+                      <input type="number" name="ideliminar" placeholder="Ingrese el id" required onkeypress="return validarn(event)">
+                    </div>
+                    </div>
+                    <div class="button">
+                    <input type="submit" value="Eliminar Usuario">
+                    </div>
+                    <hr>
+                </form>
+            </div>
+            
+            <div class="containerActualizar">
+                <div class="title">Ingrese el ID del usuario a actualizar sus datos</div>
+                <form method="post" name="formularioactualizar" action="Actualizar" onsubmit="return validarIDA(this)"><br>
+                    <div class="user-details">
+                    <div class="input-box">
+                      <span class="details">ID)</span>
+                      <input type="number" name="idactualizar" placeholder="Ingrese el id" required onkeypress="return validarn(event)">
+                    </div>
+                    </div>
+                    <div class="button">
+                    <input type="submit" value="Actualizar Datos">
+                    </div>
+                </form>
+            </div>
+            <hr>
+            <div class = "contenedorb">
+                
+            </div>
     </body>
 </html>
